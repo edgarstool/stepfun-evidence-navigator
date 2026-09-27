@@ -26,6 +26,14 @@ Open `http://127.0.0.1:8766`, paste project notes, and select **請 Agent 分析
 
 A real `step-3.7-flash` call through the Step Plan channel returned a complete analysis on 2026-09-27. See [VERIFICATION.md](VERIFICATION.md) for the input, output, request ID, and token usage. The key and the model's hidden reasoning are not retained.
 
+The public GitHub Pages site is a recorded evidence page, not a hosted API backend. The interactive runner in `index.html` + `server.py` runs locally with the operator's own Step Plan key.
+
+## Red-team evaluation
+
+The original prompt passed 2/3 adversarial cases and failed an unsupported-PASS injection. After hardening note boundaries and adding strict response validation, a fresh live Step 3.7 Flash run passed 3/3 cases. See [REDTEAM.md](REDTEAM.md) and [redteam-results.json](redteam-results.json).
+
+If you expose the Python backend publicly, add your own authentication/rate limiting before allowing untrusted callers to spend API credits.
+
 ## Builder Program submission
 
 - **Project:** Evidence Navigator — an evidence-aware project status agent
