@@ -39,4 +39,4 @@ Source + real API proof: https://github.com/edgarstool/stepfun-evidence-navigato
 ## Form
 Submit at https://forms.gle/5UAE1cJgUCrMMchP9
 
-The form requires the StepFun platform UID.
+The form accepts `Not yet` for the StepFun platform UID, but a UID is required before token plans or credits can be issued.
